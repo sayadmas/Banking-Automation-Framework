@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+  Full regression suite.
+  Run everything:      mvn test
+  API tests only:      mvn test -Dtest="com.banking.tests.api.*"
+  UI tests only:       mvn test -Dtest=BankingUiTests
+-->
+<suite name="Banking Full Regression Suite" verbose="1">
+
+    <!-- ============ API REGRESSION (RestAssured) ============ -->
+    <test name="API Regression">
+        <classes>
+            <class name="com.banking.tests.api.AuthTests"/>
+            <class name="com.banking.tests.api.AccountTests"/>
+            <class name="com.banking.tests.api.TransferTests"/>
+            <class name="com.banking.tests.api.DepositTests"/>
+            <class name="com.banking.tests.api.BillPaymentTests"/>
+        </classes>
+    </test>
+
+    <!-- ============ UI REGRESSION (Selenium) ============ -->
+    <test name="UI Regression">
+        <classes>
+            <class name="com.banking.tests.ui.BankingUiTests"/>
+        </classes>
+    </test>
+
+</suite>

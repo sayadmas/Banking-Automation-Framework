@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Banking Full Regression Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="UI Regression(failed)" verbose="0">
+    <classes>
+      <class name="com.banking.tests.ui.BankingUiTests">
+        <methods>
+          <include name="balanceCheckShowsSeededAmount"/>
+          <include name="overdraftTransferShowsError"/>
+          <include name="setUpDriver"/>
+          <include name="validTransferShowsSuccess"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.banking.tests.ui.BankingUiTests -->
+    </classes>
+  </test> <!-- UI Regression(failed) -->
+</suite> <!-- Failed suite [Banking Full Regression Suite] -->

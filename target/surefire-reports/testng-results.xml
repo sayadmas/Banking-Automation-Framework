@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-07T21:06:53 EDT" name="Surefire suite" finished-at="2026-07-07T21:07:51 EDT" duration-ms="58238">
+    <groups>
+    </groups>
+    <test started-at="2026-07-07T21:06:53 EDT" name="Surefire test" finished-at="2026-07-07T21:07:51 EDT" duration-ms="58238">
+      <class name="com.banking.tests.ui.BankingUiTests">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:06:53 EDT" name="setUpDriver" finished-at="2026-07-07T21:06:54 EDT" duration-ms="743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:06:54 EDT" name="setUp" finished-at="2026-07-07T21:07:07 EDT" duration-ms="13353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="balanceCheckShowsSeededAmount()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:07 EDT" name="balanceCheckShowsSeededAmount" description="TC_UI_003: Balance check shows the seeded $5,000" finished-at="2026-07-07T21:07:11 EDT" duration-ms="3880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- balanceCheckShowsSeededAmount -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:11 EDT" name="tearDown" finished-at="2026-07-07T21:07:11 EDT" duration-ms="142" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=balanceCheckShowsSeededAmount status=SUCCESS method=BankingUiTests.balanceCheckShowsSeededAmount()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:11 EDT" name="setUp" finished-at="2026-07-07T21:07:19 EDT" duration-ms="7996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidLoginShowsError()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:19 EDT" name="invalidLoginShowsError" description="TC_UI_002: Wrong password shows an error and stays on login" finished-at="2026-07-07T21:07:21 EDT" duration-ms="2464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginShowsError -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:21 EDT" name="tearDown" finished-at="2026-07-07T21:07:22 EDT" duration-ms="103" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=invalidLoginShowsError status=SUCCESS method=BankingUiTests.invalidLoginShowsError()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:22 EDT" name="setUp" finished-at="2026-07-07T21:07:29 EDT" duration-ms="7343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="overdraftTransferShowsError()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:29 EDT" name="overdraftTransferShowsError" description="TC_UI_005: Transfer over the balance shows the API error on screen" finished-at="2026-07-07T21:07:33 EDT" duration-ms="4368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- overdraftTransferShowsError -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:33 EDT" name="tearDown" finished-at="2026-07-07T21:07:33 EDT" duration-ms="112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=overdraftTransferShowsError status=SUCCESS method=BankingUiTests.overdraftTransferShowsError()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:33 EDT" name="setUp" finished-at="2026-07-07T21:07:41 EDT" duration-ms="7364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validLoginShowsDashboard()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:41 EDT" name="validLoginShowsDashboard" description="TC_UI_001: Valid login shows the dashboard with a welcome message" finished-at="2026-07-07T21:07:42 EDT" duration-ms="1538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginShowsDashboard -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:42 EDT" name="tearDown" finished-at="2026-07-07T21:07:42 EDT" duration-ms="84" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validLoginShowsDashboard status=SUCCESS method=BankingUiTests.validLoginShowsDashboard()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:42 EDT" name="setUp" finished-at="2026-07-07T21:07:49 EDT" duration-ms="6329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validTransferShowsSuccess()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:49 EDT" name="validTransferShowsSuccess" description="TC_UI_004: Valid transfer via the UI shows a success message" finished-at="2026-07-07T21:07:51 EDT" duration-ms="2257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validTransferShowsSuccess -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f]" started-at="2026-07-07T21:07:51 EDT" name="tearDown" finished-at="2026-07-07T21:07:51 EDT" duration-ms="86" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validTransferShowsSuccess status=SUCCESS method=BankingUiTests.validTransferShowsSuccess()[pri:0, instance:com.banking.tests.ui.BankingUiTests@5d740a0f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.banking.tests.ui.BankingUiTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

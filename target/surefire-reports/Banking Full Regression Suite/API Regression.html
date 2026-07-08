@@ -1,0 +1,325 @@
+<html>
+<head>
+<title>TestNG:  API Regression</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>API Regression</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>49/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 07 20:26:47 EDT 2026</td>
+</tr>
+<tr><td>Total time:</td><td>2 seconds (2726 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.insufficientFunds()'><b>insufficientFunds</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_004: Insufficient funds -> 422 INSUFFICIENT_FUNDS</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.AccountTests.historyBadDateFormat()'><b>historyBadDateFormat</b><br>Test class: com.banking.tests.api.AccountTests<br>Test method: TC_ACC_007: Bad date format -> 400 INVALID_DATE_FORMAT</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AccountTests@70e8f8e</td></tr>
+<tr>
+<td title='com.banking.tests.api.BillPaymentTests.idempotencyPreventsDoublePayment()'><b>idempotencyPreventsDoublePayment</b><br>Test class: com.banking.tests.api.BillPaymentTests<br>Test method: TC_BILL_003: Same idempotency key twice -> paid only once</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.BillPaymentTests@29626d54</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.validTransferSucceeds()'><b>validTransferSucceeds</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_001: Valid transfer succeeds and debits/credits correctly</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.depositWrongCurrency()'><b>depositWrongCurrency</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_007: Wrong currency -> 422 CURRENCY_MISMATCH</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.depositExactlyAtLimit()'><b>depositExactlyAtLimit</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_002: Boundary — deposit exactly at the $50,000 limit succeeds</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.loginWithWrongPassword()'><b>loginWithWrongPassword</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_003: Wrong password -> 401 INVALID_CREDENTIALS</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.AccountTests.historyInvalidDateRange()'><b>historyInvalidDateRange</b><br>Test class: com.banking.tests.api.AccountTests<br>Test method: TC_ACC_008: fromDate after toDate -> 400 INVALID_DATE_RANGE</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AccountTests@70e8f8e</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.idempotencyPreventsDoubleDebit()'><b>idempotencyPreventsDoubleDebit</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_002: Same idempotency key twice -> same transaction, no double debit</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.oneCentOverBalanceFails()'><b>oneCentOverBalanceFails</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_005: Boundary — one cent over the balance fails</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.BillPaymentTests.insufficientFunds()'><b>insufficientFunds</b><br>Test class: com.banking.tests.api.BillPaymentTests<br>Test method: TC_BILL_005: Not enough money -> 422 INSUFFICIENT_FUNDS</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.BillPaymentTests@29626d54</td></tr>
+<tr>
+<td title='com.banking.tests.api.BillPaymentTests.wrongCurrency()'><b>wrongCurrency</b><br>Test class: com.banking.tests.api.BillPaymentTests<br>Test method: TC_BILL_008: Wrong currency -> 422 CURRENCY_MISMATCH</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.BillPaymentTests@29626d54</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.tokenWithInvalidCode()'><b>tokenWithInvalidCode</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_006: Fake authorization code -> 401 INVALID_AUTH_CODE</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.negativeAmount()'><b>negativeAmount</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_011: Negative amount -> 400 VALIDATION_ERROR</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.BillPaymentTests.unknownBiller()'><b>unknownBiller</b><br>Test class: com.banking.tests.api.BillPaymentTests<br>Test method: TC_BILL_004: Unknown biller -> 404 BILLER_NOT_FOUND</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.BillPaymentTests@29626d54</td></tr>
+<tr>
+<td title='com.banking.tests.api.AccountTests.historyReturnsSeededTransactions()'><b>historyReturnsSeededTransactions</b><br>Test class: com.banking.tests.api.AccountTests<br>Test method: TC_ACC_004: History returns the 8 seeded transactions</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AccountTests@70e8f8e</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.currencyMismatch()'><b>currencyMismatch</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_010: Currency mismatch -> 422 CURRENCY_MISMATCH</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.BillPaymentTests.frozenAccountCannotPay()'><b>frozenAccountCannotPay</b><br>Test class: com.banking.tests.api.BillPaymentTests<br>Test method: TC_BILL_006: Frozen account cannot pay -> 403 ACCOUNT_FROZEN</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.BillPaymentTests@29626d54</td></tr>
+<tr>
+<td title='com.banking.tests.api.BillPaymentTests.validBillPaymentSucceeds()'><b>validBillPaymentSucceeds</b><br>Test class: com.banking.tests.api.BillPaymentTests<br>Test method: TC_BILL_002: Valid bill payment returns 201 with confirmation number</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.BillPaymentTests@29626d54</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.frozenSourceAccount()'><b>frozenSourceAccount</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_009: Frozen source account -> 403 ACCOUNT_FROZEN</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.validDepositSucceeds()'><b>validDepositSucceeds</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_001: Valid deposit returns 201 and credits the account</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.BillPaymentTests.missingConsumerNumber()'><b>missingConsumerNumber</b><br>Test class: com.banking.tests.api.BillPaymentTests<br>Test method: TC_BILL_007: Missing consumerNumber -> 400 VALIDATION_ERROR</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.BillPaymentTests@29626d54</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.sourceAccountNotFound()'><b>sourceAccountNotFound</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_007: Unknown source account -> 404 SOURCE_ACCOUNT_NOT_FOUND</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.zeroAmount()'><b>zeroAmount</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_012: Zero amount -> 400 VALIDATION_ERROR</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.transferExactFullBalance()'><b>transferExactFullBalance</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_003: Boundary — transfer of exactly the full balance succeeds</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.fullTwoLayerFlow()'><b>fullTwoLayerFlow</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_002: Full 2-layer flow — code exchanges for access token</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.AccountTests.balanceForValidAccount()'><b>balanceForValidAccount</b><br>Test class: com.banking.tests.api.AccountTests<br>Test method: TC_ACC_001: Balance for a valid account returns full details</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AccountTests@70e8f8e</td></tr>
+<tr>
+<td title='com.banking.tests.api.AccountTests.balanceForFrozenAccount()'><b>balanceForFrozenAccount</b><br>Test class: com.banking.tests.api.AccountTests<br>Test method: TC_ACC_003: Balance for frozen account -> 403 ACCOUNT_FROZEN</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AccountTests@70e8f8e</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.threeDecimalPlaces()'><b>threeDecimalPlaces</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_014: Amount with 3 decimal places -> 400 VALIDATION_ERROR</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.depositToFrozenAccount()'><b>depositToFrozenAccount</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_006: Deposit to frozen account -> 403 ACCOUNT_FROZEN</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.protectedEndpointWithGarbageToken()'><b>protectedEndpointWithGarbageToken</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_010: Garbage token -> 401 INVALID_TOKEN</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.loginWithMissingPassword()'><b>loginWithMissingPassword</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_004: Missing password -> 400 MISSING_CREDENTIALS</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.AccountTests.historyPagination()'><b>historyPagination</b><br>Test class: com.banking.tests.api.AccountTests<br>Test method: TC_ACC_006: Pagination — pageSize=3 returns exactly 3 items</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AccountTests@70e8f8e</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.destinationAccountNotFound()'><b>destinationAccountNotFound</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_008: Unknown destination account -> 404 DESTINATION_ACCOUNT_NOT_FOUND</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.protectedEndpointWithoutToken()'><b>protectedEndpointWithoutToken</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_008: No Authorization header -> 401 MISSING_TOKEN</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.AccountTests.historyDebitFilter()'><b>historyDebitFilter</b><br>Test class: com.banking.tests.api.AccountTests<br>Test method: TC_ACC_005: type=DEBIT filter returns only debits</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AccountTests@70e8f8e</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.idempotencyPreventsDoubleCredit()'><b>idempotencyPreventsDoubleCredit</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_003: Same idempotency key twice -> no double credit</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.AccountTests.balanceForUnknownAccount()'><b>balanceForUnknownAccount</b><br>Test class: com.banking.tests.api.AccountTests<br>Test method: TC_ACC_002: Balance for unknown account -> 404 ACCOUNT_NOT_FOUND</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AccountTests@70e8f8e</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.tokenWithWrongGrantType()'><b>tokenWithWrongGrantType</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_005: Wrong grant_type -> 400 UNSUPPORTED_GRANT_TYPE</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.BillPaymentTests.listBillers()'><b>listBillers</b><br>Test class: com.banking.tests.api.BillPaymentTests<br>Test method: TC_BILL_001: Biller directory returns all 4 seeded billers</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.BillPaymentTests@29626d54</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.loginWithValidCredentials()'><b>loginWithValidCredentials</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_001: Valid login returns an authorization code</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.depositToUnknownAccount()'><b>depositToUnknownAccount</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_005: Deposit to unknown account -> 404 ACCOUNT_NOT_FOUND</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.protectedEndpointWithExpiredToken()'><b>protectedEndpointWithExpiredToken</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_009: Expired token -> 401 TOKEN_EXPIRED</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.invalidDepositType()'><b>invalidDepositType</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_008: Invalid depositType -> 400 VALIDATION_ERROR</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.sameAccountTransfer()'><b>sameAccountTransfer</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_006: Same source and destination -> 400 SAME_ACCOUNT_TRANSFER</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+<tr>
+<td title='com.banking.tests.api.AuthTests.authCodeIsSingleUse()'><b>authCodeIsSingleUse</b><br>Test class: com.banking.tests.api.AuthTests<br>Test method: TC_AUTH_007: Auth code is single-use — second exchange fails</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.AuthTests@cd3fee8</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.depositOverLimit()'><b>depositOverLimit</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_004: One cent over the AML limit -> 422 DEPOSIT_LIMIT_EXCEEDED</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.DepositTests.negativeDepositAmount()'><b>negativeDepositAmount</b><br>Test class: com.banking.tests.api.DepositTests<br>Test method: TC_DEP_009: Negative deposit amount -> 400 VALIDATION_ERROR</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.DepositTests@5bd03f44</td></tr>
+<tr>
+<td title='com.banking.tests.api.TransferTests.missingToAccount()'><b>missingToAccount</b><br>Test class: com.banking.tests.api.TransferTests<br>Test method: TC_FT_013: Missing required field (toAccount) -> 400 VALIDATION_ERROR</td>
+<td></td>
+<td>0</td>
+<td>com.banking.tests.api.TransferTests@17046283</td></tr>
+</table><p>
+</body>
+</html>
