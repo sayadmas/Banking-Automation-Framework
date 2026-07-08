@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    environment {
+        PATH = "/opt/homebrew/bin:$PATH"
+    }
+
     stages {
 
         stage('Check Environment') {
@@ -21,5 +25,40 @@ pipeline {
 
             }
         }
+
+
+        stage('Build') {
+
+            steps {
+
+                sh 'mvn clean compile'
+
+            }
+
+        }
+
+
+        stage('Regression Test') {
+
+            steps {
+
+                sh 'mvn test -Dcucumber.filter.tags="@Regression"'
+
+            }
+
+        }
+
     }
+
+
+    post {
+
+        always {
+
+            echo "Execution completed"
+
+        }
+
+    }
+
 }
