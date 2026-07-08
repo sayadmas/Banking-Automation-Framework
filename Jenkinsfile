@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/sayadmas/PNC-Automation-Framework.git'
+                url: 'https://github.com/sayadmas/Banking-Automation-Framework.git'
             }
         }
         stage('Build') {
