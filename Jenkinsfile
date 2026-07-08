@@ -1,64 +1,29 @@
 pipeline {
-
     agent any
-
     environment {
         PATH = "/opt/homebrew/bin:$PATH"
     }
-
     stages {
-
-        stage('Check Environment') {
-
+        stage('Checkout') {
             steps {
-
-                sh '''
-                echo "PATH:"
-                echo $PATH
-
-                echo "Java:"
-                java -version
-
-                echo "Maven:"
-                mvn -version
-                '''
-
+                git branch: 'main',
+                url: 'https://github.com/sayadmas/Banking-Automation-Framework.git'
             }
         }
-
-
         stage('Build') {
-
             steps {
-
                 sh 'mvn clean compile'
-
             }
-
         }
-
-
-        stage('Regression Test') {
-
+        stage('Run Regression Tests') {
             steps {
-
                 sh 'mvn test -Dcucumber.filter.tags="@Regression"'
-
             }
-
         }
-
     }
-
-
     post {
-
         always {
-
-            echo "Execution completed"
-
+            echo "Test execution completed"
         }
-
     }
-
 }
